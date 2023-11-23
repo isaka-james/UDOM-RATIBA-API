@@ -222,18 +222,6 @@ print(responseFromServer.text)</code></pre>
 
     </section>
 
-    <section class="container">
-        <h2>Usage Example</h2>
-        <p>
-            Developers can interact with the API using the following endpoints:
-            <ul>
-                <li>To get categories: <a href="https://udom-ratiba-api.vercel.app/get/category">https://udom-ratiba-api.vercel.app/get/category</a></li>
-                <li>To get options: <a href="https://udom-ratiba-api.vercel.app/get/option">https://udom-ratiba-api.vercel.app/get/option</a></li>
-                <li>To get programs: <a href="https://udom-ratiba-api.vercel.app/get/programme">https://udom-ratiba-api.vercel.app/get/programme</a></li>
-                <li>To get a schedule table: <a href="https://udom-ratiba-api.vercel.app/api">https://udom-ratiba-api.vercel.app/api</a> (POST request with 'option' and 'programme' form data)</li>
-            </ul>
-        </p>
-    </section>
 
     <section class="container">
         <h2>How to Use</h2>
@@ -248,12 +236,135 @@ print(responseFromServer.text)</code></pre>
         </ul>
     </section>
 
-    <section class="container">
-        <h2>Error Handling</h2>
-        <p>
-            The application employs a robust error-handling mechanism, providing a structured JSON response with status
-            and code for any encountered errors during API interactions.
-        </p>
+    <section>
+        <h3>Invalid Request:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 400</li>
+            <li><strong>Message:</strong> "Invalid request"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Ensure that the requested endpoint is valid.</li>
+                    <li>Check if the parameters are correctly provided.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Option or Programme Empty:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 400</li>
+            <li><strong>Message:</strong> "Option or programme is empty"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Verify that both 'option' and 'programme' values are provided in the request form.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Option or Programme Not Found:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 400</li>
+            <li><strong>Message:</strong> "Option or programme not found in form data"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Make sure to include 'option' and 'programme' in the form data of the request.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>False Post Values Not Found:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 400</li>
+            <li><strong>Message:</strong> "False post values not found"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Ensure that the necessary values ('option' and 'programme') are included in the POST request.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Internal Server Error:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 500</li>
+            <li><strong>Message:</strong> "An error occurred: {error_message}"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>In case of a 500 error, there is an internal issue with the server. Contact the API provider for assistance.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Purpose of the Request Not Specified:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 400</li>
+            <li><strong>Message:</strong> "Invalid request"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Clearly specify the purpose of the request, i.e., 'category', 'option', or 'programme'.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Values are Empty:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 400</li>
+            <li><strong>Message:</strong> "The values are empty"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Ensure that both 'option' and 'programme' values are not empty in the POST request.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Invalid SSL Request:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 404</li>
+            <li><strong>Message:</strong> "Page not found"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Ensure that requests are made using secure HTTPS. Check the URL and update if necessary.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Unexpected Error:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 500</li>
+            <li><strong>Message:</strong> "An unexpected error occurred: {error_message}"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>In case of an unexpected error, contact the API provider for assistance.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Option or Programme Values Not Found:</h3>
+        <ul>
+            <li><strong>Error Code:</strong> 400</li>
+            <li><strong>Message:</strong> "Option or programme values not found"</li>
+            <li><strong>Handling:</strong>
+                <ul>
+                    <li>Verify that both 'option' and 'programme' values are provided in the POST request.</li>
+                </ul>
+            </li>
+        </ul>
     </section>
 
     <section class="container">
