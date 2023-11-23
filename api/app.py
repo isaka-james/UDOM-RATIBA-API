@@ -352,7 +352,7 @@ def api():
 
 # Handling about section
 @app.route("/")
-def about():
+def home():
     context = {
            'title': 'Udom Ratiba API Documentation',
     }
