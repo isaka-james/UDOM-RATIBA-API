@@ -236,136 +236,140 @@ print(responseFromServer.text)</code></pre>
         </ul>
     </section>
 
-    <section>
-        <h3>Invalid Request:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 400</li>
-            <li><strong>Message:</strong> "Invalid request"</li>
-            <li><strong>Handling:</strong>
+    <div style="margin: 50 !important;">
+            <section>
+                <h3>Invalid Request:</h3>
                 <ul>
-                    <li>Ensure that the requested endpoint is valid.</li>
-                    <li>Check if the parameters are correctly provided.</li>
+                    <li><strong>Error Code:</strong> 400</li>
+                    <li><strong>Message:</strong> "Invalid request"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Ensure that the requested endpoint is valid.</li>
+                            <li>Check if the parameters are correctly provided.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Option or Programme Empty:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 400</li>
-            <li><strong>Message:</strong> "Option or programme is empty"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Option or Programme Empty:</h3>
                 <ul>
-                    <li>Verify that both 'option' and 'programme' values are provided in the request form.</li>
+                    <li><strong>Error Code:</strong> 400</li>
+                    <li><strong>Message:</strong> "Option or programme is empty"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Verify that both 'option' and 'programme' values are provided in the request form.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Option or Programme Not Found:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 400</li>
-            <li><strong>Message:</strong> "Option or programme not found in form data"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Option or Programme Not Found:</h3>
                 <ul>
-                    <li>Make sure to include 'option' and 'programme' in the form data of the request.</li>
+                    <li><strong>Error Code:</strong> 400</li>
+                    <li><strong>Message:</strong> "Option or programme not found in form data"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Make sure to include 'option' and 'programme' in the form data of the request.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>False Post Values Not Found:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 400</li>
-            <li><strong>Message:</strong> "False post values not found"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>False Post Values Not Found:</h3>
                 <ul>
-                    <li>Ensure that the necessary values ('option' and 'programme') are included in the POST request.</li>
+                    <li><strong>Error Code:</strong> 400</li>
+                    <li><strong>Message:</strong> "False post values not found"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Ensure that the necessary values ('option' and 'programme') are included in the POST request.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Internal Server Error:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 500</li>
-            <li><strong>Message:</strong> "An error occurred: {error_message}"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Internal Server Error:</h3>
                 <ul>
-                    <li>In case of a 500 error, there is an internal issue with the server. Contact the API provider for assistance.</li>
+                    <li><strong>Error Code:</strong> 500</li>
+                    <li><strong>Message:</strong> "An error occurred: {error_message}"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>In case of a 500 error, there is an internal issue with the server. Contact the API provider for assistance.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Purpose of the Request Not Specified:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 400</li>
-            <li><strong>Message:</strong> "Invalid request"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Purpose of the Request Not Specified:</h3>
                 <ul>
-                    <li>Clearly specify the purpose of the request, i.e., 'category', 'option', or 'programme'.</li>
+                    <li><strong>Error Code:</strong> 400</li>
+                    <li><strong>Message:</strong> "Invalid request"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Clearly specify the purpose of the request, i.e., 'category', 'option', or 'programme'.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Values are Empty:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 400</li>
-            <li><strong>Message:</strong> "The values are empty"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Values are Empty:</h3>
                 <ul>
-                    <li>Ensure that both 'option' and 'programme' values are not empty in the POST request.</li>
+                    <li><strong>Error Code:</strong> 400</li>
+                    <li><strong>Message:</strong> "The values are empty"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Ensure that both 'option' and 'programme' values are not empty in the POST request.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Invalid SSL Request:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 404</li>
-            <li><strong>Message:</strong> "Page not found"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Invalid SSL Request:</h3>
                 <ul>
-                    <li>Ensure that requests are made using secure HTTPS. Check the URL and update if necessary.</li>
+                    <li><strong>Error Code:</strong> 404</li>
+                    <li><strong>Message:</strong> "Page not found"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Ensure that requests are made using secure HTTPS. Check the URL and update if necessary.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Unexpected Error:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 500</li>
-            <li><strong>Message:</strong> "An unexpected error occurred: {error_message}"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Unexpected Error:</h3>
                 <ul>
-                    <li>In case of an unexpected error, contact the API provider for assistance.</li>
+                    <li><strong>Error Code:</strong> 500</li>
+                    <li><strong>Message:</strong> "An unexpected error occurred: {error_message}"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>In case of an unexpected error, contact the API provider for assistance.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
 
-    <section>
-        <h3>Option or Programme Values Not Found:</h3>
-        <ul>
-            <li><strong>Error Code:</strong> 400</li>
-            <li><strong>Message:</strong> "Option or programme values not found"</li>
-            <li><strong>Handling:</strong>
+            <section>
+                <h3>Option or Programme Values Not Found:</h3>
                 <ul>
-                    <li>Verify that both 'option' and 'programme' values are provided in the POST request.</li>
+                    <li><strong>Error Code:</strong> 400</li>
+                    <li><strong>Message:</strong> "Option or programme values not found"</li>
+                    <li><strong>Handling:</strong>
+                        <ul>
+                            <li>Verify that both 'option' and 'programme' values are provided in the POST request.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </section>
+    </div>
+
+    
 
     <section class="container">
         <h2>Server Settings</h2>
