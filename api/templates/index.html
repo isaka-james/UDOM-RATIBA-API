@@ -176,15 +176,49 @@
         <h2>Author</h2>
         <p>
             This project is developed and maintained by masterplan. For inquiries or collaboration opportunities, feel free to contact
-            <a href="https://wa.me/your_phone_number">Whatsapp</a>.
+            <a href="https://wa.me/255673182989">Whatsapp</a>.
         </p>
     </section>
 
-    <section class="container">
-        <h2>License</h2>
-        <p>This project is licensed under the <a href="LICENSE">MIT License</a>. Feel free to explore and adapt the
-            codebase to meet your specific requirements.</p>
-    </section>
+    <!-- ... Previous HTML code ... -->
+
+<section class="container">
+    <h2>License</h2>
+    <p>This project is licensed under the <a href="#" data-toggle="modal" data-target="#licenseModal">MIT License</a>. Feel free to explore and adapt the codebase to meet your specific requirements.</p>
+</section>
+
+<!-- Bootstrap Modal for License -->
+<div class="modal fade" id="licenseModal" tabindex="-1" role="dialog" aria-labelledby="licenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="licenseModalLabel">MIT License</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Copyright &copy; <span id="currentYear"></span> <span id="copyrightHolder">Masterplan</span></p>
+                <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+                <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+                <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ... Remaining HTML code ... -->
+
+<script>
+    // Update the current year dynamically in the license modal
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+</script>
+
+
+
 
     <!-- Add other sections similarly with their respective styling -->
 
