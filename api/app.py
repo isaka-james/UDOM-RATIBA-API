@@ -350,6 +350,14 @@ def api():
 
 
 
+# Handling about section
+@app.route("/")
+def about():
+    context = {
+           'title': 'Udom Ratiba API Documentation',
+    }
+    return render_template('/index.html',**context)
+
 
 
 
