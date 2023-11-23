@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 
 # THE STATUS OF THE PROJECT
-mode = 'development'
-#mode = 'production'
+#mode = 'development'
+mode = 'production'
 
 
 # GLOBAL SUPER CHANGABLE VARIABLES
@@ -373,7 +373,7 @@ def page_not_found(error):
         }
 	return not_found
 
-'''
+
 # redirecting ensuring securingness through 'https'
 @app.before_request
 def before_request():
@@ -382,7 +382,7 @@ def before_request():
         code = 301
         return redirect(url, code=code)
 
-'''
+
         
 
 
