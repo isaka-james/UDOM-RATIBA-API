@@ -1,0 +1,32 @@
+{
+    "code": 200,
+    "data": [
+        [
+            "Monday",
+            "07:30 - 09:30, Monday\nCH 2108  - Lecture\n                    ;\nStaff\n                    : Mr. Khalfan Sule; Students\n                    : CHEM2; Venue\n                    : LRB 106",
+            "15:30 - 17:30, Monday\nCH 2101 BSc. Chem Y2 - Lecture\n                    ;\nStaff\n                    : Prof. Numbury Babu; Students\n                    : CHEM2; Venue\n                    : LRB 106",
+            "18:00 - 20:00, Monday\nCH 2106  - Tutorial\n                    ;\nStaff\n                    : Dr. Isaac Onoka; Students\n                    : CHEM2; Venue\n                    : CBSL_AB2_LR06"
+        ],
+        [
+            "Tuesday",
+            "07:30 - 09:30, Tuesday\nCH 2107  - Lecture\n                    ;\nStaff\n                    : ; Students\n                    : CHEM2; Venue\n                    : LRB 106",
+            "15:30 - 17:30, Tuesday\nCH 2103 BSc. Chem Y2 - Lecture\n                    ;\nStaff\n                    : Dr. Somit Kumar; Students\n                    : CHEM2; Venue\n                    : FL2 (CIVE)"
+        ],
+        [
+            "Wednesday",
+            "07:30 - 09:30, Wednesday\nCH 2104 BSc. Chem Y2 - Lecture\n                    ;\nStaff\n                    : Dr. John Makangara; Students\n                    : CHEM2; Venue\n                    : LRB 106"
+        ],
+        [
+            "Thursday",
+            "09:30 - 11:30, Thursday\nCH 2105 BSc. Chem Y2 - Tutorial\n                    ;\nStaff\n                    : Dr. Mastan Rao; Students\n                    : CHEM2; Venue\n                    : CBSL_AB2_LR06",
+            "13:30 - 15:30, Thursday\nCH 2105 BSc. Chem Y2 - Lecture\n                    ;\nStaff\n                    : Dr. Mastan Rao; Students\n                    : CHEM2; Venue\n                    : LRB 106"
+        ],
+        [
+            "Friday",
+            "10:30 - 12:30, Friday\nCH 2104 BSc. Chem Y2 - Tutorial\n                    ;\nStaff\n                    : Dr. John Makangara; Students\n                    : CHEM2; Venue\n                    : LRB 105",
+            "14:00 - 16:00, Friday\nCH 2106  - Lecture\n                    ;\nStaff\n                    : Dr. Isaac Onoka; Students\n                    : CHEM2; Venue\n                    : LRB 106"
+        ]
+    ],
+    "status": "success",
+    "title": "CHEM2 - TEACHING Timetable"
+}
