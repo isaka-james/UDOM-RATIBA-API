@@ -128,6 +128,52 @@
             </ul>
         </section>
 
+
+
+
+<!-- ... Previous HTML code ... -->
+
+<section class="container">
+    <h2>How to Use</h2>
+    <p>Developers can integrate this API into their applications to access Udom Ratiba schedule data for various purposes, including but not limited to:</p>
+    <ul>
+        <li>Building schedule management applications</li>
+        <li>Creating academic tools and resources</li>
+        <li>Developing customized schedule widgets for websites</li>
+    </ul>
+    <p>Developers can send a request using the following example:</p>
+    <pre><code>import requests
+
+url = 'https://udom-ratiba-api.vercel.app/api'
+
+data = {
+    'option': 'programme',
+    'programme': '9986'
+}
+
+headers = {
+    'User-Agent': 'YourCustomUserAgent/1.0',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Referer': 'https://ratiba.udom.ac.tz/',
+    'Custom-Header': 'YourCustomValue'
+}
+
+responseFromServer = requests.post(url, data=data, headers=headers)
+
+print(responseFromServer.text)</code></pre>
+</section>
+
+<!-- ... Remaining HTML code ... -->
+
+
+
+
+
+
+
+
+        
+
     </section>
 
     <section class="container">
