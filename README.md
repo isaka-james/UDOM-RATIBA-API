@@ -1,5 +1,7 @@
 # Udom Ratiba API
 
+[Full Documentation Here](https://udom-ratiba-api.vercel.app/)
+
 ## Overview
 Udom Ratiba API is a custom-made Flask application hosted on Vercel. It functions as a robust API, facilitating the extraction of schedule information from the University of Dodoma (Udom) Ratiba portal through web scraping. Developers are encouraged to leverage this API to seamlessly integrate Udom's schedule data into their applications and programs.
 
