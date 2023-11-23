@@ -86,32 +86,87 @@
     <section class="container">
         <h2>API Endpoints</h2>
 
-        <section>
-            <h3>1. Get Categories</h3>
-            <ul>
-                <li><strong>Endpoint:</strong> <code>/get/category</code></li>
-                <li><strong>Method:</strong> GET</li>
-                <li><strong>Description:</strong> Retrieve categories for schedule data.</li>
-            </ul>
+        <section class="container">
+            <h2>API Endpoints</h2>
+        
+            <section>
+                <h3>1. Get Categories</h3>
+                <ul>
+                    <li><strong>Endpoint:</strong> <code>/get/category</code></li>
+                    <li><strong>Method:</strong> GET</li>
+                    <li><strong>Description:</strong> Retrieve categories for schedule data.</li>
+                </ul>
+                <h4>Python Example</h4>
+                <pre><code>import requests
+        
+        url = 'https://udom-ratiba-api.vercel.app/get/category'
+        response = requests.get(url)
+        
+        print(response.text)</code></pre>
+            </section>
+        
+            <section>
+                <h3>2. Get Options</h3>
+                <ul>
+                    <li><strong>Endpoint:</strong> <code>/get/option</code></li>
+                    <li><strong>Method:</strong> GET</li>
+                    <li><strong>Description:</strong> Retrieve options for schedule data.</li>
+                </ul>
+                <h4>Python Example</h4>
+                <pre><code>import requests
+        
+        url = 'https://udom-ratiba-api.vercel.app/get/option'
+        response = requests.get(url)
+        
+        print(response.text)</code></pre>
+            </section>
+        
+            <section>
+                <h3>3. Get Programs</h3>
+                <ul>
+                    <li><strong>Endpoint:</strong> <code>/get/programme</code></li>
+                    <li><strong>Method:</strong> GET</li>
+                    <li><strong>Description:</strong> Retrieve programs for schedule data.</li>
+                </ul>
+                <h4>Python Example</h4>
+                <pre><code>import requests
+        
+        url = 'https://udom-ratiba-api.vercel.app/get/programme'
+        response = requests.get(url)
+        
+        print(response.text)</code></pre>
+            </section>
+        
+            <section>
+                <h3>4. Get Schedule Table</h3>
+                <ul>
+                    <li><strong>Endpoint:</strong> <code>/api</code></li>
+                    <li><strong>Method:</strong> POST/GET</li>
+                    <li><strong>Form Data:</strong></li>
+                    <ul>
+                        <li><code>option</code>: Option value</li>
+                        <li><code>programme</code>: Program value</li>
+                    </ul>
+                    <li><strong>Description:</strong> Retrieve a schedule table based on the selected option and program.</li>
+                </ul>
+                <h4>Python Example</h4>
+                <pre><code>import requests
+        
+        url = 'https://udom-ratiba-api.vercel.app/api'
+        data = {
+            'option': 'programme',
+            'programme': '9986'
+        }
+        response = requests.post(url, data=data)
+        
+        print(response.text)</code></pre>
+            </section>
+        
         </section>
-
-        <section>
-            <h3>2. Get Options</h3>
-            <ul>
-                <li><strong>Endpoint:</strong> <code>/get/option</code></li>
-                <li><strong>Method:</strong> GET</li>
-                <li><strong>Description:</strong> Retrieve options for schedule data.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>3. Get Programs</h3>
-            <ul>
-                <li><strong>Endpoint:</strong> <code>/get/programme</code></li>
-                <li><strong>Method:</strong> GET</li>
-                <li><strong>Description:</strong> Retrieve programs for schedule data.</li>
-            </ul>
-        </section>
+        
+        <!-- ... Previous HTML code ... -->
+        
+        
 
         <section>
             <h3>4. Get Schedule Table</h3>
