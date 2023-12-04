@@ -26,18 +26,67 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
 
 ### 1. Get Categories
 - **Endpoint**: `/get/category`
-- **Method**: GET
-- **Description**: Retrieve categories for schedule data.
+- **Method**: GET ( https://udom-ratiba-api.vercel.app/get/category )
+- **Description**: You can check the type of the timetable available, When you fetch most of the time you will find that it only says *Teaching*, this is because there are two category *Teaching* and *Examination*, since the examination season is not yet nearer then you will find only  the *Teaching timetable type*.
+  
+- The sample output of the request
+
+```python
+{
+  "code": 200,
+  "data": {
+    "1": "Teaching"
+  },
+  "status": "success"
+}
+```
 
 ### 2. Get Options
 - **Endpoint**: `/get/option`
-- **Method**: GET
-- **Description**: Retrieve options for schedule data.
+- **Method**: GET ( https://udom-ratiba-api.vercel.app/get/option )
+- **Description**: Here you can see that you want your timetable can be categorized by either *coarse*,*programme*,*venue* and so on.. , Disclaimer: now we only support fetching by *programme*, hope we can provide with more categories.
+- Sample output
+```python
+{
+  "code": 200,
+  "data": {
+    "course": "By Course ",
+    "instructor": "By Instructor",
+    "programme": "By Programme ",
+    "room": "By Venue "
+  },
+  "status": "success"
+}
+
+```
+
 
 ### 3. Get Programs
 - **Endpoint**: `/get/programme`
-- **Method**: GET
-- **Description**: Retrieve programs for schedule data.
+- **Method**: GET ( https://udom-ratiba-api.vercel.app/get/programme )
+- **Description**: This is very important, here you can see all the programmes with the appropiate code of each programme, It is **crutual** to know the code of the programme you want to fetch, because with that code you can fetch the timetable in the following steps..
+  
+- sample output
+```python
+{
+  "code": 200,
+  "data": {
+    "9763": "BAENGLISH3 - CHSS",
+    "9764": "BATI3 - CHSS",
+    "9765": "BAARCA1 - CHSS",
+    "9766": "BACHT1 - CHSS",
+    ...
+    ...
+    ....
+    "10096": "N4 - SNPH & SMD",
+    "10097": "MSCAC&FIN(EV)2 - CoBE",
+    "10098": "HIS2 - SNPH & SMD",
+    "10325": "MDPS1 - CHSS"
+  },
+  "status": "success"
+}
+```
+
 
 ### 4. Get Schedule Table
 - **Endpoint**: `/api`
