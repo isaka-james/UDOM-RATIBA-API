@@ -12,11 +12,11 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
   - [Get Options](#2-get-options)
   - [Get Programs](#3-get-programs)
   - [Get Schedule Table](#4-get-schedule-table)
-- [Usage Example](#usage-example)
 - [How to Use](#how-to-use)
 - [Error Handling](#error-handling)
 - [Server Settings](#server-settings)
 - [Author](#author)
+- [Collaborate](#collaborate)
 - [License](#license)
 
 ## API Base URL
@@ -64,7 +64,7 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
 ### 3. Get Programs
 - **Endpoint**: `/get/programme`
 - **Method**: GET ( https://udom-ratiba-api.vercel.app/get/programme )
-- **Description**: This is very important, here you can see all the programmes with the appropiate code of each programme, It is **crutual** to know the code of the programme you want to fetch, because with that code you can fetch the timetable in the following steps..
+- **Description**: This is very important, here you can see all the programmes with the appropiate code of each programme, It is *crutual* to know the code of the programme you want to fetch, because with that code you can fetch the timetable in the following steps..
   
 - sample output
 ```python
@@ -96,12 +96,98 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
   - `programme`: Program value
 - **Description**: Retrieve a schedule table based on the selected option and program.
 
-## Usage Example
-Developers can interact with the API using the following endpoints:
-- To get categories: [https://udom-ratiba-api.vercel.app/get/category](https://udom-ratiba-api.vercel.app/get/category)
-- To get options: [https://udom-ratiba-api.vercel.app/get/option](https://udom-ratiba-api.vercel.app/get/option)
-- To get programs: [https://udom-ratiba-api.vercel.app/get/programme](https://udom-ratiba-api.vercel.app/get/programme)
-- To get a schedule table: [https://udom-ratiba-api.vercel.app/api](https://udom-ratiba-api.vercel.app/api) (POST request with 'option' and 'programme' form data)
+- sample request
+```python
+import requests
+url = 'https://udom-ratiba-api.vercel.app/api'
+data = {
+            'option': 'programme',
+            'programme': '9986' # This is the code of the programme ( basically CSDFE2 )
+}
+response = requests.post(url, data=data)
+
+print(response.text)
+
+```
+  - sample output
+```python
+{
+  "code": 200,
+  "data": {
+    "monday": [
+      {
+        "coarse": "IA 212  - Lecture",
+        "end_time": "09:30",
+        "staff": "Dr. Daniel Ngondya",
+        "start_time": "07:30",
+        "students": "CSDFE2",
+        "venue": "LRB 004D"
+      },
+      {
+        "coarse": "CP 211 D - Lecture",
+        "end_time": "11:30",
+        "staff": "Mr. Justin Woiso",
+        "start_time": "09:30",
+        "students": "CSDFE2",
+        "venue": "LRA 019"
+      },
+      {
+        "coarse": "CP 212 H - Tutorial",
+        "end_time": "12:30",
+        "staff": "Dr. Mustapha Mohsin",
+        "start_time": "11:30",
+        "students": "CSDFE2, BIS2",
+        "venue": "LRB 002A"
+      },
+      {
+        "coarse": "CP 215 E - Lecture",
+        "end_time": "17:30",
+        "staff": "Mr. Everyjustus Barongo",
+        "start_time": "15:30",
+        "students": "CSDFE2",
+        "venue": "LRB 101"
+      },
+      {
+        "coarse": "CP 215 E - Tutorial",
+        "end_time": "18:30",
+        "staff": "Mr. Everyjustus Barongo",
+        "start_time": "17:30",
+        "students": "CSDFE2",
+        "venue": "LRA 018"
+      }
+    ],
+
+    ...
+    ...
+    ...
+
+    "friday": [
+      {
+        "coarse": "CP 212 H - Lecture",
+        "end_time": "11:30",
+        "staff": "Dr. Mustapha Mohsin",
+        "start_time": "09:30",
+        "students": "CSDFE2, BIS2",
+        "venue": "LRB 103"
+      },
+      {
+        "coarse": "IA 212  - Tutorial",
+        "end_time": "13:30",
+        "staff": "Dr. Daniel Ngondya",
+        "start_time": "12:30",
+        "students": "CSDFE2",
+        "venue": "FL1 (CIVE)"
+      }
+    ],
+
+  },
+  "status": "success",
+  "title": "CSDFE2 - TEACHING Timetable"
+}
+
+```
+
+
 
 ## How to Use
 Developers can integrate this API into their applications to access Udom Ratiba schedule data for various purposes, including but not limited to:
@@ -109,14 +195,20 @@ Developers can integrate this API into their applications to access Udom Ratiba 
 - Creating academic tools and resources
 - Developing customized schedule widgets for websites
 
+
 ## Error Handling
 The application employs a robust error-handling mechanism, providing a structured JSON response with status and code for any encountered errors during API interactions.
+- *For intensive error handling,see the official documentation [udom-api](https://udom-ratiba-api.vercel.app/)*.
 
 ## Server Settings
 The application is effortlessly hosted on Vercel, eliminating the need for a separate server setup. Developers can seamlessly access and utilize the API without the hassle of intricate server configurations.
+- The API endpoint is handled with indifinite care..
 
 ## Author
-This project is developed and maintained by **masterplan**. For inquiries or collaboration opportunities, feel free to contact [Whatsapp](wa.me/255673182989).
+This project is developed and maintained by **masterplan**. 
+
+## Collaborate
+You are warmly welcome to contribute!. If you added a feature to this API why you keep it with yourself, just share it.(◕‿◕)
 
 ## License
 This project is licensed under the [MIT License](LICENSE). Feel free to explore and adapt the codebase to meet your specific requirements.
