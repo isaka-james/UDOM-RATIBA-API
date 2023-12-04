@@ -27,7 +27,7 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
 ### 1. Get Categories
 - **Endpoint**: `/get/category`
 - **Method**: GET ( https://udom-ratiba-api.vercel.app/get/category )
-- **Description**: You can check the type of the timetable available, When you fetch most of the time you will find that it only says *Teaching*, this is because there are two category *Teaching* and *Examination*, since the examination season is not yet nearer then you will find only  the *Teaching timetable type*.
+- **Description**: You can check the types of the timetable available. When you fetch the data,most of the time you will only see *Teaching*, this is because there are two categories *Teaching* and *Examination*, that is because the examination season is not yet nearer and the api is fetching real time data.
   
 - The sample output of the request
 
@@ -44,7 +44,7 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
 ### 2. Get Options
 - **Endpoint**: `/get/option`
 - **Method**: GET ( https://udom-ratiba-api.vercel.app/get/option )
-- **Description**: Here you can see that you want your timetable can be categorized by either *coarse*,*programme*,*venue* and so on.. , Disclaimer: now we only support fetching by *programme*, hope we can provide with more categories.
+- **Description**: Here you can see all the available options for the later fetching of the API. Your timetable can be categorized by either *coarse*,*programme*,*venue* and so on.. ,
 - Sample output
 ```python
 {
@@ -64,7 +64,7 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
 ### 3. Get Programs
 - **Endpoint**: `/get/programme`
 - **Method**: GET ( https://udom-ratiba-api.vercel.app/get/programme )
-- **Description**: This is very important, here you can see all the programmes with the appropiate code of each programme, It is *crutual* to know the code of the programme you want to fetch, because with that code you can fetch the timetable in the following steps..
+- **Description**: This is very important, here you can see all the programmes with the appropiate *code of each programme*, It is *crutual* to know the code of the programme you want to fetch, because with that code you can fetch the timetable in the following steps..
   
 - sample output
 ```python
@@ -94,7 +94,7 @@ Udom Ratiba API is a custom-made Flask application hosted on Vercel. It function
 - **Form Data**:
   - `option`: Option value
   - `programme`: Program value
-- **Description**: Retrieve a schedule table based on the selected option and program.
+- **Description**: Retrieve a schedule table based on the selected option and program. Remember that currently we're 
 
 - sample request
 ```python
