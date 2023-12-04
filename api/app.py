@@ -356,7 +356,7 @@ def home():
     context = {
            'title': 'Udom Ratiba API Documentation',
     }
-    return render_template('/index.html',**context)
+    return render_template('/index.txt',**context)
 
 
 
