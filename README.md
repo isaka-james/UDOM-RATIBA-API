@@ -205,7 +205,7 @@ The application is effortlessly hosted on Vercel, eliminating the need for a sep
 - The API endpoint is handled with indifinite care..
 
 ## Author
-This project is developed and maintained by **masterplan**. 
+This project is currently developed and maintained by **masterplan**. 
 
 ## Collaborate
 You are warmly welcome to contribute!. If you added a feature to this API why you keep it with yourself, just share it.(◕‿◕)
