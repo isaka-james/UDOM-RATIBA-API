@@ -6,15 +6,21 @@ from urllib.parse import quote
 
 app = Flask(__name__)
 
+# Let lose some memory for a project's sake
+__author__ = "masterplan"
+__project_name__ = "UDOM-RATIBA-API"
+__version_project__ = 0.1
+
 
 # THE STATUS OF THE PROJECT
 #mode = 'development'
 mode = 'production'
 
 
+
 # GLOBAL SUPER CHANGABLE VARIABLES
-yr = 10
-sms = 3356 # current semester
+yr = 10 # I don't even know why udom say this year is 10 haha
+sms = 3356 # current semester, the same reason as above 
 
 
 
@@ -26,11 +32,14 @@ class usefulUtils:
         self.x, self.y, self.z = x, y, z
 
     def random_csrf(length=25):
+        # This regulate random csrf everytime we make request to udom
         characters = string.ascii_letters + string.digits + string.punctuation
         random_string = ''.join(random.choice(characters) for _ in range(length))
         return random_string
 
+
     def remove_first_item(dictionary):
+            # Remove first item which is always empty
             if dictionary:
                 # Create a new dictionary excluding the first item
                 new_dict = {key: value for key, value in list(dictionary.items())[1:]}
@@ -121,6 +130,7 @@ class usefulUtils:
 
 
 class getRatibaFromUdom:
+    # This class is the one that does all the request things
     def __init__(self, semester, year, csrf):
         self.semester, self.year, self.csrf = semester,year,csrf
 
@@ -202,7 +212,7 @@ class getRatibaFromUdom:
 
 
 class jsonMake:
-    
+    # This is the class that makes the json from the extracted and modified data
     def __init__(self,x,y,z):
         self.x,self.y,self.z = x,y,z
     
@@ -350,13 +360,13 @@ def api():
 
 
 
-# Handling about section
+# This is the one which will have documentation on the web page
 @app.route("/")
 def home():
     context = {
            'title': 'Udom Ratiba API Documentation',
     }
-    return render_template('/index.txt',**context)
+    return render_template('/index.rs',**context)
 
 
 
