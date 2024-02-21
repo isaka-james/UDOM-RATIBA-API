@@ -1,4 +1,5 @@
 # Udom Ratiba API
+<img src="https://komarev.com/ghpvc/?username=udom-ratiba&label=udom-ratiba-api&color=0e75b6&style=flat" alt="since 21 Feb,2024" />
 
 [Full Documentation Here](https://udom-ratiba-api.vercel.app/)
 
